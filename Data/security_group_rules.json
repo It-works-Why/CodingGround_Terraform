@@ -1,0 +1,50 @@
+[
+  {
+    "type": "ingress",
+    "from_port": 80,
+    "to_port": 80,
+    "protocol": "tcp",
+    "cidr_blocks:": ["0.0.0.0/0"],
+    "security_group_id": ["module.security_group.sg_ids['alb_sg']", "module.security_group.sg_ids['ec2_sg']", "module.security_group.sg_ids['jugde0_sg']"]
+  },
+  {
+    "type": "ingress",
+    "from_port": 443,
+    "to_port": 443,
+    "protocol": "tcp",
+    "cidr_blocks": ["0.0.0.0/0"],
+    "security_group_id": ["module.security_group.sg_ids['alb_sg']"]
+  },
+  {
+    "type": "ingress",
+    "from_port": 22,
+    "to_port": 22,
+    "protocol": "tcp",
+    "cidr_blocks": ["0.0.0.0/0"],
+  "security_group_id": ["module.security_group.sg_ids['ec2_sg']", "module.security_group.sg_ids['jugde0_sg']"]
+  },
+  {
+    "type": "ingress",
+    "from_port": 2358,
+    "to_port": 2358,
+    "protocol": "tcp",
+    "cidr_blocks": ["0.0.0.0/0"],
+    "security_group_id": ["module.security_group.sg_ids['jugde0_sg']"]
+  },
+  {
+    "type": "ingress",
+    "from_port": 3306,
+    "to_port": 3306,
+    "protocol": "tcp",
+    "source_security_group_id": ["module.security_group.sg_ids['ec2_sg']"],
+    "security_group_id": ["module.security_group.sg_ids['rds_sg']"]
+  },
+  {
+    "type": "egress",
+    "from_port": 0,
+    "to_port": 0,
+    "protocol": "-1",
+    "cidr_blocks": ["0.0.0.0/0"],
+    "security_group_id": ["module.security_group.sg_ids['alb_sg']","module.security_group.sg_ids['ec2_sg']","module.security_group.sg_ids['rds_sg']", "module.security_group.sg_ids['jugde0_sg']"]
+  }
+]

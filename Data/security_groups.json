@@ -1,0 +1,18 @@
+[
+  {
+    "name": "alb_sg",
+    "description": "Allow HTTP/HTTPS"
+  },
+  {
+    "name": "ec2_sg",
+    "description": "SG for ec2 Server"
+  },
+  {
+    "name": "rds_sg",
+    "description": "Allow MySQL"
+  },
+  {
+    "name": "jugde0_sg",
+    "description": "SG for Jugde0 Server"
+  }
+]
