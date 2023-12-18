@@ -1,7 +1,7 @@
 locals {
   expanded_rules = flatten([
     for idx, rule in var.rules : [
-      for sg in rule.security_group_id : { 
+      for sg in rule.security_group_id : {
         rule = rule
         sg   = sg
       }

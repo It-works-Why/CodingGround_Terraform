@@ -3,24 +3,24 @@
     "name": "public_subnet_a",
     "cidr": "172.16.0.0/24",
     "public": true,
-    "az": "ca-central-1a"
+    "az": "ap-east-1a"
   },
   {
     "name": "public_subnet_b",
     "cidr": "172.16.1.0/24",
     "public": true,
-    "az": "ca-central-1b"
+    "az": "ap-east-1b"
   },
   {
     "name": "private_subnet_a",
     "cidr": "172.16.2.0/24",
     "public": false,
-    "az": "ca-central-1a"
+    "az": "ap-east-1a"
   },
   {
     "name": "private_subnet_b",
     "cidr": "172.16.3.0/24",
     "public": false,
-    "az": "ca-central-1b"
+    "az": "ap-east-1b"
   }
 ]
